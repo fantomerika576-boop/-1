@@ -34,11 +34,7 @@ public class Shop {
 
             threads[t] = new Thread(() -> {
 
-                // Потік бере сторінки через крок THREADS:
-                // каталог-1: 1, 5
-                // каталог-2: 2, 6
-                // каталог-3: 3, 7
-                // каталог-4: 4, 8
+                
                 for (int page = me + 1; page <= PAGES; page += THREADS) {
                     loadPage(page);
                 }
